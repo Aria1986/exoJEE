@@ -43,6 +43,16 @@ public class CategoryDao {
         return category;
     }
 
+    public String supprimerCategory(String id) throws Exception{
+        Data data = new Data(1,"int",id);
+        ArrayList<Data> datas = new ArrayList<>();
+        datas.add(data);
+        bdd.crudRequete("DELETE FROM categories WHERE category_id=?", datas);
+        return "La category "+id+" a été supprimée.";
+    }
+//    public Category modifyCategory(int id) throws Exception{
+//
+//    }
 }
 
 

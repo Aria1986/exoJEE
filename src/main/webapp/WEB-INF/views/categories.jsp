@@ -10,6 +10,9 @@
 --%>
 <%@ include file="../../index.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:if test="${not empty msg}" >
+    <p>${msg}</p>
+</c:if>
     <h1>See all categories</h1>
 <ul>
 <%--    <li><h2>${category1.nom}</h2>--%>
@@ -21,6 +24,12 @@
     <c:forEach items="${listCategories}" var="category">
         <li><a href='Category?id=${category.id}'><h2>${category.nom}</h2></a>
             <p>${category.description}</p>
+<%--            <form action="Categories/Delete/${category_id}" method="POST">--%>
+<%--                <input type="hidden" name="_method" value="DELETE">--%>
+<%--                <button type="submit">Supprimer</button>--%>
+<%--            </form>--%>
+
+            <a href="Categories/Delete/${category_id}"  onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?')">delete category</a>
         </li>
     </c:forEach>
 </ul>
