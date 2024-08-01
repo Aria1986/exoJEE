@@ -1,0 +1,60 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <display-name>exo JEE</display-name>
+<servlet>
+  <servlet-name>GetFormCategory </servlet-name>
+  <servlet-class>Servlet.GetFormCategoryServlet</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>HelloServlet </servlet-name>
+    <servlet-class>com.example.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TestJSP</servlet-name>
+    <servlet-class>Servlet.TestJSP</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PostCategoryServlet</servlet-name>
+    <servlet-class>Servlet.PostCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllCategoriesServlet</servlet-name>
+    <servlet-class>Servlet.GetAllCategoriesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCategoryServlet</servlet-name>
+    <servlet-class>Servlet.GetCategoryServlet</servlet-class>
+  </servlet>
+
+<servlet-mapping>
+  <servlet-name>HelloServlet</servlet-name>
+  <url-pattern>/HelloServlet</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestJSP</servlet-name>
+    <url-pattern>/Testjsp</url-pattern>
+  </servlet-mapping>
+<servlet-mapping>
+  <servlet-name>GetFormCategory</servlet-name>
+  <url-pattern>/formCategory</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostCategoryServlet</servlet-name>
+    <url-pattern>/postCategory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>  GetAllCategoriesServlet</servlet-name>
+    <url-pattern>/Categories</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCategoryServlet</servlet-name>
+    <url-pattern>/Category</url-pattern>
+</servlet-mapping>
+</web-app>
