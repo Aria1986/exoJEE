@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class CategoryDao {
     private BDD bdd;
 
@@ -30,6 +31,16 @@ public class CategoryDao {
         } else {
             return null;
         }
+    }
+    public Category createCategory(String nom, String description) throws Exception{
+        ArrayList<Data> datas = new ArrayList<>();
+        Data data1 = new Data(1,"string",nom);
+        Data data2 = new Data(2,"string",description);
+        datas.add(data1);
+        datas.add(data2);
+        bdd.crudRequete("INSERT INTO categories (nom,description) values(?,?)",datas);
+        Category category = new Category(nom, description);
+        return category;
     }
 
 }
