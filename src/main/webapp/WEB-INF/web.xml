@@ -65,4 +65,9 @@
     <servlet-name>DeleteCategoryServlet</servlet-name>
     <url-pattern>/Categories/Delete/</url-pattern>
 </servlet-mapping>
+  
+  <listener>
+    <listener-class>listener.HibernateContextListener</listener-class>
+  </listener>
 </web-app>
+

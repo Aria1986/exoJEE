@@ -10,6 +10,6 @@
 <h1>Detailed category</h1>
 <ul>
     <li><h2>${category.nom}</h2></li>
-    <li><p>${category.description}</p></li>
+<%--    <li><p>${category.description}</p></li>--%>
 </ul>
 

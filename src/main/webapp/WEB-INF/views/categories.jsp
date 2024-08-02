@@ -29,7 +29,7 @@
 <%--                <button type="submit">Supprimer</button>--%>
 <%--            </form>--%>
 
-            <a href="Categories/Delete/${category_id}"  onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?')">delete category</a>
+            <a href="Categories/Delete?id=${category_id}"  onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?')">delete category</a>
         </li>
     </c:forEach>
 </ul>

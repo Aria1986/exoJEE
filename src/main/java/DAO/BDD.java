@@ -53,6 +53,8 @@ public class BDD {
         getConnection();
         PreparedStatement pstm = this.con.prepareStatement(sql);
         ResultSet st = pstm.executeQuery();
+        pstm.close();
+        this.con.close();
         return st;
     }
 
