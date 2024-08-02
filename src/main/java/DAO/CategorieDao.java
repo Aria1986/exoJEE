@@ -12,7 +12,7 @@ public class CategorieDao {
 
     public CategorieDao(){
         factory = new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Category.class)
+                .addAnnotatedClass(Categorie.class)
                 .buildSessionFactory();
     }
     public void save(Categorie entity){
