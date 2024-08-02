@@ -4,6 +4,7 @@
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <a href="./Testjsp">Test</a>
+    <a href="inscription">Inscription</a>
     <a href="./formCategory">Create a category</a>
     <a href="./Categories">See categories</a>
 </nav>

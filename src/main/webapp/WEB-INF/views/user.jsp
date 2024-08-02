@@ -11,8 +11,8 @@
 <title>User</title>
 <h1>User details</h1>
 <ul>
- <li><h2>${user.name}</h2></li>
-    <c:if test="user.email !=null">
+ <li><h2>${user.userName}</h2></li>
+    <c:if test="${not empty user.email}">
         <li>${user.email}</li>
     </c:if>
 </ul>

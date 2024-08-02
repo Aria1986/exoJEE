@@ -9,13 +9,24 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name="id", unique = true)
     private long id;
+    @Column(name="userName", nullable = false, unique = true)
     private String userName;
 
+    @Column(name = "password", nullable = false)
     private String pwd;
+
+    @Column(name = "email", nullable = true)
     private String email;
     public User(){
 
+    }
+    public User(long id, String name, String pwd){
+        this.setId(id);
+        this.setUserName(name);
+        this.setPwd( BCrypt.hashpw(pwd, BCrypt.gensalt()));
     }
     public User(String name, String pwd){
         this.setUserName(name);
